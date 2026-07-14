@@ -1,0 +1,9 @@
+lliurex-remote-agent (0.1) noble; urgency=medium
+
+  [ Luis Garcia Gisbert ]
+  * Added lliurex-remote-agent binary package.
+
+  [ Juan Ramon Pelegrina ]
+  * Initial release. Added zero-lliurex-remote-agent helper.
+
+ -- Luis Garcia Gisbert <luisgg@gmail.com>  Tue, 14 Jul 2026 14:54:23 +0200
