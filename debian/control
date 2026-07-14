@@ -13,3 +13,11 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: lliurex-remot-agent installer
   Zero-center helper, It downloads and installs lliurex-remote-agent
 
+Package: lliurex-remote-agent
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, anydesk-client (>=8.0.2)
+Conflicts: anydesksai (<< 1:0.1), zero-lliurex-anydesk (<< 1:0.1)
+Description: lliurex remote desktop control agent
+  This package installs the aproppiate remote control agent for
+  helpdesk in LliureX corporative environments.
+
