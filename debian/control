@@ -1,0 +1,15 @@
+Source: lliurex-remote-agent
+Section: admin
+Priority: standard
+Maintainer: Equipo LliureX <lliurex@gva.es> 
+Build-Depends: debhelper (>=10)
+Standards-Version: 4.1.2
+Homepage: http://lliurex.net
+Vcs-Browser: https://github.com/lliurex/lliurex-remote-agent
+
+Package: zero-lliurex-remote-agent
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: lliurex-remot-agent installer
+  Zero-center helper, It downloads and installs lliurex-remote-agent
+
