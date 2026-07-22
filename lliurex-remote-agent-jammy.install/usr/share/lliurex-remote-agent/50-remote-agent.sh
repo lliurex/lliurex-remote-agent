@@ -17,8 +17,9 @@ if [ "$DESKTOP_PATH" ] && [ -d "$DESKTOP_PATH" ] ; then
 	if [ -e "$OLD_FILE" ] ; then
 		rm -f "$OLD_FILE"
 	fi
-	if [ ! -e "$NEW_FILE" ] ; then
+	if [ ! -x "$NEW_FILE" ] ; then
 		cp -f "$FIXED_FILE" "$NEW_FILE"
+		chmod +x "$NEW_FILE"
 	fi
 fi
 
