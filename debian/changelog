@@ -1,11 +1,16 @@
 lliurex-remote-agent (0.2) jammy; urgency=medium
 
+  [ Luis Garcia Gisbert ]
   * Fixed some missing Build-Depends
   * lliurex-remote-agent:
     - Added lliurex-rdesk-client as Depends
   * New binary package lliurex-anydesk-client:
     - Install 50-remote-agent.sh' script in /etc/profile.d to show AnyDesk SAI icon in desktop
     - Added lliurex-desktops-keeper as Depends
+
+  [ Juan Ramon Pelegrina ]
+  * Changed zero to install lliurex-anydesk-client
+  * zero-lliurex-remote-agent package renamed to zero-lliurex-anydesk-client
 
  -- Luis Garcia Gisbert <luisgg@gmail.com>  Wed, 22 Jul 2026 20:12:19 +0200
 
