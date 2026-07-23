@@ -1,7 +1,0 @@
-{
-	"type":"apt",
-	"pkg_list": [{"name":"lliurex-remote-agent","key_store":"zero-lliurex-remote-agent","custom_name":"AnyDesk: remote desktop application", "custom_icon":"remote-agent.svg"}],
-	"script": {"name":"/usr/share/zero-lliurex-remote-agent/remote-agent_script","remove":true},
-	"custom_icon_path":"/usr/share/zero-lliurex-remote-agent/",
-	"zomando":"zero-lliurex-remote-agent"
-	}
