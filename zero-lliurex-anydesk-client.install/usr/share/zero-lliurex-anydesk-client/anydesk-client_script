@@ -14,7 +14,8 @@ case $ACTION in
 			TEST=$( dpkg-query -s $ix 2> /dev/null| grep Status | cut -d " " -f 4 )
 			if [ "$TEST" == 'installed' ];then
 				exit 1
-			fi	
+			fi
+			apt-get remove -y anydesk-client
 		done	
 	;;	
 esac	
