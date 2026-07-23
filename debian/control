@@ -15,7 +15,7 @@ Description: lliurex-anydesk-client installer
 
 Package: lliurex-remote-agent
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, lliurex-anydesk-client (= ${binary:Version}), lliurex-rdesk-client (>=0.1.1)
+Depends: ${shlibs:Depends}, ${misc:Depends}, lliurex-anydesk-client (= ${binary:Version}), zero-lliurex-anydesk-client (= ${binary:Version}), lliurex-rdesk-client (>=0.1.1)
 Description: lliurex remote desktop control agent
   This package installs the aproppiate remote control agent for
   helpdesk in LliureX corporative environments.
