@@ -7,11 +7,11 @@ Standards-Version: 4.1.2
 Homepage: http://lliurex.net
 Vcs-Browser: https://github.com/lliurex/lliurex-remote-agent
 
-Package: zero-lliurex-remote-agent
+Package: zero-lliurex-anydesk-client
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: lliurex-remot-agent installer
-  Zero-center helper, It downloads and installs lliurex-remote-agent
+Description: lliurex-anydesk-client installer
+  Zero-center helper, It downloads and installs lliurex-anydesk-client
 
 Package: lliurex-remote-agent
 Architecture: all
