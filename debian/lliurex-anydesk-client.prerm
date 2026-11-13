@@ -28,6 +28,12 @@ case "$1" in
                 rm "${ORIGINAL_FILE}"
 	fi
         dpkg-divert --package "lliurex-anydesk-client" --rename --quiet --remove "${ORIGINAL_FILE}"
+
+	# force anydesk-client restart after the override file is removed
+        systemctl daemon-reload || true
+        systemctl stop anydesk-client.service || true
+        systemctl start anydesk-client.service || true
+
     ;;
 
     failed-upgrade)

@@ -36,6 +36,11 @@ case "$1" in
                 fi
         fi
 
+	# force anydesk-client restart to include override file
+	systemctl daemon-reload || true
+	systemctl stop anydesk-client.service || true
+	systemctl start anydesk-client.service || true
+
 
 
     ;;
