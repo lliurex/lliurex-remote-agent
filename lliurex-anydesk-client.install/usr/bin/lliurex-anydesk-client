@@ -1,3 +1,11 @@
 #!/bin/sh
+ANYDESK_CLIENT="/usr/bin/anydesk-client.diverted"
+# check for parameters like --service, --tray, etc
+if echo "x$@" |grep -q "x--" ; then
+	exec ANYDESK_CLIENT "$@"
+fi
+
 touch /run/anydesk-client-service-enable.d/lliurex-anydesk-client || true
-exec /usr/bin/anydesk-client.diverted "$@"
+# avoid using exec when in client mode
+$ANYDESK_CLIENT "$@" || rc=$?
+exit $rc
