@@ -1,7 +1,7 @@
 lliurex-remote-agent (0.3) jammy; urgency=medium
 
-  * Avoid starting of lliurex-anydesk-client service at boot to avoid network
-    saturation issues
+  * Disable starting of lliurex-anydesk-client service at boot to avoid network
+    saturation issues. Now, the service starts when the client is launched.
 
  -- Luis Garcia Gisbert <luisgg@gmail.com>  Fri, 13 Nov 2026 17:44:21 +0100
 
