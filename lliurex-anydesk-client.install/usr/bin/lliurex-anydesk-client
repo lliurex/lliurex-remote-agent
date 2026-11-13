@@ -1,0 +1,3 @@
+#!/bin/sh
+touch /run/anydesk-client-service-enable.d/lliurex-anydesk-client || true
+exec /usr/bin/anydesk-client.diverted "$@"
