@@ -1,1 +1,2 @@
-/usr/share/lliurex-anydesk-client/50-remote-agent.sh	/etc/profile.d/50-remote-agent.sh
+/usr/share/lliurex-anydesk-client/50-remote-agent.sh					/etc/profile.d/50-remote-agent.sh
+/usr/share/lliurex-anydesk-client/anydesk-client.service.d/20-avoid-start-on-boot.conf	/etc/systemd/system/anydesk-client.service.d/20-avoid-start-on-boot.conf
