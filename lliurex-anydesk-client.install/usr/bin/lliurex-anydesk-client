@@ -1,11 +1,13 @@
 #!/bin/sh
 ANYDESK_CLIENT="/usr/bin/anydesk-client.diverted"
+NOTIFY_TIMEOUT="20000"
+NOTIFY_MESSAGE="Starting anydesk-client service ..."
+
 # check for parameters like --service, --tray, etc
-if echo "x$@" |grep -q "x--" ; then
-	exec ANYDESK_CLIENT "$@"
+if ! echo "x$@" |grep -q "x--" ; then
+	touch /run/anydesk-client-service-enable.d/lliurex-anydesk-client || true
+	notify-send -a "anydesk-client" -t $NOTIFY_TIMEOUT $NOTIFY_MESSAGE
+	sleep 1
 fi
 
-touch /run/anydesk-client-service-enable.d/lliurex-anydesk-client || true
-# avoid using exec when in client mode
-$ANYDESK_CLIENT "$@" || rc=$?
-exit $rc
+exec $ANYDESK_CLIENT "$@"
