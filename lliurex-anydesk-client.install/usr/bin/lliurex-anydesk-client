@@ -1,12 +1,18 @@
 #!/bin/sh
 ANYDESK_CLIENT="/usr/bin/anydesk-client.diverted"
-NOTIFY_TIMEOUT="20000"
+NOTIFY_TIMEOUT="30000"
 NOTIFY_MESSAGE="Starting anydesk-client service ..."
+
+RUN_DIRECTORY="/run/anydesk-client-service-enable.d"
 
 # check for parameters like --service, --tray, etc
 if ! echo "x$@" |grep -q "x--" ; then
-	touch /run/anydesk-client-service-enable.d/lliurex-anydesk-client || true
-	notify-send -a "anydesk-client" -t $NOTIFY_TIMEOUT $NOTIFY_MESSAGE
+
+	# assume service is started if the anydesk_run directory is not empty
+	# and avoid notify message
+	ls -1 "$RUN_DIRECTORY" |grep -q "." || notify-send -a "anydesk-client" -t $NOTIFY_TIMEOUT "$NOTIFY_MESSAGE"
+
+	touch "$RUN_DIRECTORY/lliurex-anydesk-client" || true
 	sleep 1
 fi
 
