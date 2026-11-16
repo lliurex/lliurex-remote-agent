@@ -1,3 +1,9 @@
+lliurex-remote-agent (0.2) noble; urgency=medium
+
+  * Fixed Build-Depends
+
+ -- Luis Garcia Gisbert <luisgg@gmail.com>  Mon, 16 Nov 2026 10:11:25 +0100
+
 lliurex-remote-agent (0.1) noble; urgency=medium
 
   [ Luis Garcia Gisbert ]
