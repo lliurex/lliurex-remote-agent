@@ -32,7 +32,7 @@ case "$1" in
 	# force anydesk-client restart after the override file is removed
         systemctl daemon-reload || true
         systemctl stop anydesk-client.service || true
-        systemctl start anydesk-client.service || true
+        systemctl start --no-block anydesk-client.service || true
 
     ;;
 
